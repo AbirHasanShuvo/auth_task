@@ -1,3 +1,4 @@
+import 'package:auth_task/presentation/home/views/home_screen.dart';
 import 'package:auth_task/routes/route_names.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -18,6 +19,11 @@ final goRouterProvider = Provider<GoRouter>((ref) {
         path: RouteNames.registration,
         name: '/registration',
         builder: (context, state) => RegistrationScreen(),
+      ),
+      GoRoute(
+        path: RouteNames.home,
+        name: '/home',
+        builder: (context, state) => HomeScreen(),
       ),
     ],
   );
